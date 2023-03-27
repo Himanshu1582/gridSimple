@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .grid-container{
+            display: grid;
+            height: 100vh;
+            grid-template-columns: 1fr 150px;
+            grid-template-rows: auto auto 1fr auto;
+            grid-template-areas: 
+            "title title"
+            "menu sidebar"
+            "header sidebar"
+            "footer footer"
+            ;
+        }
+
+        .item1{
+            grid-area:title;
+            background-color: rgb(0, 166, 255);
+            text-align: center;
+            border:1px solid black;
+            color: white;
+        }
+        .item2{
+            grid-area: menu;
+            background-color: rgb(0, 166, 255);
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .item2 a{
+            text-decoration: none;
+            color: white;
+        }
+        .item3{
+            grid-area: header;
+            background-color: white;
+            border: 1px solid black;
+        }
+        .item4{
+            grid-area: sidebar;
+            color: white;
+            background-color: rgb(3, 3, 74);
+            border: 1px solid black;
+        }
+        .item5{
+            grid-area: footer;
+            background-color: rgb(0, 166, 255);
+            border: 1px solid black;
+            color: white;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item1">
+            <h1>Tittle</h1>
+        </div>
+        <div class="item2">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="item3">
+            <h1>Heading</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium ducimus vitae officiis, repellendus sunt provident aliquam molestiae quia suscipit explicabo.</p>
+        </div>
+        <div class ="item4">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ipsum fuga aperiam voluptate quibusdam illum delectus amet maiores obcaecati nam!
+        </div>
+        <div class="item5">
+            <p>Closing Notes</p>
+        </div>
+    </div>
+</body>
+</html>
